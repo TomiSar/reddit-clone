@@ -103,3 +103,4 @@
 * npm install -g stepzen
 * yarn add @apollo/client graphql
 * yarn add react-hook-form
+* yarn add react-hot-toast
