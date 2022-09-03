@@ -1,3 +1,6 @@
+## ReactJs Reddit clone application
+* This app is Reddit clone application made with NextJS
+
 # Deployed application
 * Coming after implementation
 
@@ -5,12 +8,13 @@
 * https://v2.tailwindcss.com/docs/guides/nextjs
 * https://nextjs.org/
 * https://nextjs.org/docs/api-reference/create-next-app
+* https://www.reddit.com/dev/api/
 
 ## Project steps
-* Setting up Next.js & Tailwind CSS		DONE!!
-* Initialising the Build				DONE!!
-* Building the Header Component (1/3)	DONE!!
-* Implementing Heroicons				
+* Setting up Next.js & Tailwind CSS
+* Initialising the Build
+* Building the Header Component (1/3)
+* Implementing Heroicons	
 * Building the Header Component (2/3)
 * Building the Search Box in Header Component
 * Building the Header Component (3/3)
@@ -18,8 +22,7 @@
 * Implementing NextAuth
 * Implementing Reddit Login using NextAuth
 * Setting Up & Implementing Supabase
-* Explaining Relational Database
-* Creating Tables in Supabase 
+* Creating Tables in Supabase
 * Setting Up & Implementing StepZen
 * Setting Up & Implementing the Apollo Client
 * Building the PostBox Component (1/2)
@@ -48,14 +51,30 @@
 * Deploying to Vercel
 * Final Deployed Build Demo
 
+## Supabase database
+* https://app.supabase.com/
+
+## StepZen (Compose a GraphQL API from REST, Database & GraphQL Building Blocks)
+* https://stepzen.com/
+* stepzen login
+* stepzen init (endpoint: "api/old-hedgehog")
+* stepzen import postgresql
+* Database settings in Supabase (settings/Database/Connection info)
+* What is your host? db.fsgbapaaxiwldamftaqs.supabase.co
+* What is your database name? postgres
+* What is the username? postgres
+* stepzen start
+* stepzen whoami --apikey
+* GraphQL endpoint: https://bugojno.stepzen.net/api/old-hedgehog/__graphql
+
 ## Create React project TypeScript
 * npx create-next-app -e with-tailwindcss --typescript redditclone2
 
 ## Start app
 * yarn run dev
 
-## ReactJs Reddit clone application
-* This app is Reddit clone application made with NextJS
+## Create Reddit API user credentials for project
+* https://www.reddit.com/prefs/apps
 
 ## Stack and framework used
 * React
@@ -74,17 +93,13 @@
 * Redux Toolkit
 * React Context API (Like REDUX)
 * User authentication
-* Material UI (Icons)
-* Google login
-* Firebase authentication
-* Firestore Database
-* Firebase Hosting 
+* HeroIcons (Icons)
+* Reddit login
+* Next Auth authentication
 
 ## Installation of needed Packages for application uging npm or yarn
-* yarn add @material-ui/core
-* yarn add @material-ui/icons
-* yarn add react-router-dom@5.2.0
-* yarn add react-tinder-card
+* yarn add @heroicons/react@v1
+* yarn add next-auth@4.3.4
+* npm install -g stepzen
+* yarn add @apollo/client graphql
 * yarn add react-hook-form
-* npm install -g firebase-tools
-* yarn add firebase@8.7.1
