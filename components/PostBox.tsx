@@ -21,7 +21,7 @@ type PostBoxProps = {
   subReddit?: string;
 };
 
-function PostBox() {
+function PostBox({ subReddit }: PostBoxProps) {
   const { data: session } = useSession();
   const [addPost] = useMutation(ADD_POST, {
     refetchQueries: [GET_ALL_POSTS, 'getPostList'],
@@ -50,7 +50,7 @@ function PostBox() {
       } = await client.query({
         query: GET_SUBREDDIT_BY_TOPIC,
         variables: {
-          topic: formData.subReddit,
+          topic: subReddit || formData.subReddit,
         },
       });
       const subRedditExists = getSubredditListByTopic.length > 0;
@@ -134,7 +134,11 @@ function PostBox() {
           disabled={!session}
           type="text"
           placeholder={
-            session ? 'Create a new post by entering a title!' : 'Sign in to post content'
+            session
+              ? subReddit
+                ? `Create a post in r/${subReddit}`
+                : 'Create a new post by entering a title!'
+              : 'Sign in to post content'
           }
         />
         <PhotographIcon
@@ -161,15 +165,17 @@ function PostBox() {
             />
           </div>
 
-          <div className="flex items-center px-2">
-            <p className="min-w-[90px]">Subreddit:</p>
-            <input
-              className="m-2 flex-1 bg-blue-50 p-2 outline-none"
-              {...register('subReddit', { required: true })}
-              type="text"
-              placeholder="i.e. ReactJS"
-            />
-          </div>
+          {!subReddit && (
+            <div className="flex items-center px-2">
+              <p className="min-w-[90px]">Subreddit:</p>
+              <input
+                className="m-2 flex-1 bg-blue-50 p-2 outline-none"
+                {...register('subReddit', { required: true })}
+                type="text"
+                placeholder="i.e. ReactJS"
+              />
+            </div>
+          )}
 
           {imageBoxOpen && (
             <div className="flex items-center px-2">
