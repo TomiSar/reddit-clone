@@ -71,6 +71,7 @@
 * npx create-next-app -e with-tailwindcss --typescript redditclone2
 
 ## Start app
+* yarn or npm install (install node modules)
 * yarn run dev
 
 ## Create Reddit API user credentials for project
@@ -97,10 +98,12 @@
 * Reddit login
 * Next Auth authentication
 
-## Installation of needed Packages for application uging npm or yarn
+## Installation of needed Packages for application using yarn or npm
 * yarn add @heroicons/react@v1
 * yarn add next-auth@4.3.4
 * npm install -g stepzen
 * yarn add @apollo/client graphql
 * yarn add react-hook-form
 * yarn add react-hot-toast
+* yarn add react-timeago
+* yarn add --dev @types/react-timeago
