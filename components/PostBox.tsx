@@ -114,7 +114,6 @@ function PostBox({ subReddit }: PostBoxProps) {
       });
     } catch (error) {
       console.log(error);
-
       toast.error('Something went wrong while creating new post!', {
         id: notification,
       });

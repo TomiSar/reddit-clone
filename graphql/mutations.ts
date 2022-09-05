@@ -16,8 +16,8 @@ export const ADD_POST = gql`
       subreddit_id: $subreddit_id
     ) {
       id
-      subreddit_id
       created_at
+      subreddit_id
       title
       body
       image
@@ -32,6 +32,18 @@ export const ADD_SUBREDDIT = gql`
       id
       topic
       created_at
+    }
+  }
+`;
+
+export const ADD_COMMENT = gql`
+  mutation AddCommentMutation($post_id: ID!, $username: String!, $text: String!) {
+    insertComment(post_id: $post_id, text: $text, username: $username) {
+      id
+      created_at
+      post_id
+      text
+      username
     }
   }
 `;

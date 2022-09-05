@@ -22,13 +22,11 @@ function Post({ post }: Props) {
 
   function voteUp() {
     setVote(vote + 1);
-    console.log('Thumbs Up 👍!!');
   }
 
   function voteDown() {
     if (vote > 0) {
       setVote(vote - 1);
-      console.log('Thumbs Down 👎!!');
     }
   }
 
