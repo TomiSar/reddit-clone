@@ -19,16 +19,16 @@ function Header() {
   return (
     <header className="sticky top-0 z-50 flex items-center bg-white px-4 py-2 shadow-sm">
       <div className="relative h-10 w-20 flex-shrink-0 cursor-pointer">
-        <Image
-          objectFit="contain"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqM7Fp6ZYu1FicM6HHqjtbdqsfyf6kHuEyig&usqp=CAU"
-          layout="fill"
-        />
+        <Link href="/">
+          <Image
+            objectFit="contain"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqM7Fp6ZYu1FicM6HHqjtbdqsfyf6kHuEyig&usqp=CAU"
+            layout="fill"
+          />
+        </Link>
       </div>
       <div className="flex items-center mx-7 xl:min-w-[300px]">
-        <Link href="/">
-          <HomeIcon className="h-5 w-5" />
-        </Link>
+        <HomeIcon className="h-5 w-5" />
         <p className="flex-1 ml-2 hidden lg:inline">Home</p>
         <ChevronDownIcon className="h-5 w-5" />
       </div>

@@ -80,6 +80,17 @@ type Query {
     )
 
   """
+  This query shows subreddits by given limit parameter.
+  """
+  getSubredditListLimit(limit: Int!): [Subreddit]
+    @dbquery(
+      type: "postgresql"
+      query: """
+      select * from "subreddit" order by "created_at" desc limit $1
+      """
+      configuration: "postgresql_config"
+    )
+  """
   This query is an example of how to simply paginate your responses.
   """
   getPaginatedCommentList(first: Int!, after: Int!): [Comment]
@@ -196,6 +207,10 @@ type Mutation {
 
   insertComment(post_id: ID!, username: String!, text: String!): Comment
     @dbquery(type: "postgresql", table: "comment", dml: INSERT, configuration: "postgresql_config")
+
+  insertVote(post_id: ID!, username: String!, upvote: Boolean!): Vote
+    @dbquery(type: "postgresql", table: "vote", dml: INSERT, configuration: "postgresql_config")
+
   """
   In this mutation example you can see how to do a mutation to delete data from the database.
   """
