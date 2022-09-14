@@ -2,7 +2,7 @@
 * This app is Reddit clone application made with NextJS
 
 # Deployed application
-* 
+* https://reddit-clone-eosin.vercel.app/
 
 ## Documentation
 * https://v2.tailwindcss.com/docs/guides/nextjs
