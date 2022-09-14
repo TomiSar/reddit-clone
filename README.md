@@ -2,7 +2,7 @@
 * This app is Reddit clone application made with NextJS
 
 # Deployed application
-* Coming after implementation
+* 
 
 ## Documentation
 * https://v2.tailwindcss.com/docs/guides/nextjs
@@ -14,7 +14,7 @@
 * Setting up Next.js & Tailwind CSS
 * Initialising the Build
 * Building the Header Component (1/3)
-* Implementing Heroicons	
+* Implementing Heroicons
 * Building the Header Component (2/3)
 * Building the Search Box in Header Component
 * Building the Header Component (3/3)
@@ -70,9 +70,10 @@
 ## Create React project TypeScript
 * npx create-next-app -e with-tailwindcss --typescript redditclone2
 
-## Start app
+## Start app and start Stepzen inside Stepzen folder
 * yarn or npm install (install node modules)
 * yarn run dev
+* start stepzen  
 
 ## Create Reddit API user credentials for project
 * https://www.reddit.com/prefs/apps
@@ -107,3 +108,4 @@
 * yarn add react-hot-toast
 * yarn add react-timeago
 * yarn add --dev @types/react-timeago
+* yarn add @uiball/loaders
